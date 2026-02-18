@@ -5,10 +5,10 @@
    ============================================================ */
 
 :root {
-  /* ===== Primary — Antique Gold ===== */
-  --color-primary: #C9A44C;
-  --color-primary-dark: #A8842F;
-  --color-primary-light: #E6CC7A;
+  /* ===== Primary — Warm Purple-Taupe ===== */
+  --color-primary: #D3C5B6;
+  --color-primary-dark: #DECEBB;
+  --color-primary-light: #F2EBDF;
 
   /* ===== Accent — Muted Teal ===== */
   --color-accent: #6FA3A0;
@@ -69,9 +69,9 @@ body {
 /* ---- Gradient Text ---- */
 .gradient-text {
   background: linear-gradient(135deg,
-      #E6CC7A,
-      #C9A44C,
-      #6FA3A0);
+      #F2EBDF,
+      #D3C5B6,
+      #DECEBB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -87,7 +87,7 @@ body {
 
 /* ---- Glow Effect ---- */
 .glow-primary {
-  box-shadow: 0 0 20px rgba(201, 164, 76, 0.25);
+  box-shadow: 0 0 20px rgba(211, 197, 182, 0.25);
 }
 
 /* ---- Animated Gradient Background ---- */
@@ -97,7 +97,7 @@ body {
       rgba(201, 164, 76, 0.08) 0%,
       transparent 50%),
     radial-gradient(ellipse at 80% 20%,
-      rgba(111, 163, 160, 0.06) 0%,
+      rgba(222, 206, 187, 0.06) 0%,
       transparent 50%);
 }
 
@@ -113,7 +113,7 @@ body {
 
 /* ---- Button Styles ---- */
 .btn-primary {
-  background: linear-gradient(135deg, #E6CC7A, #C9A44C);
+  background: linear-gradient(135deg, #F2EBDF, #D3C5B6);
   color: #0F172A;
   padding: 0.75rem 1.5rem;
   border-radius: 0.75rem;
@@ -127,9 +127,9 @@ body {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #C9A44C, #A8842F);
+  background: linear-gradient(135deg, #D3C5B6, #DECEBB);
   transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(201, 164, 76, 0.35);
+  box-shadow: 0 8px 20px rgba(211, 197, 182, 0.35);
 }
 
 .btn-primary:active {
@@ -157,7 +157,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background: rgba(201, 164, 76, 0.1);
+  background: rgba(211, 197, 182, 0.1);
   transform: translateY(-1px);
 }
 
@@ -176,7 +176,7 @@ body {
 
 .form-input:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(201, 164, 76, 0.25);
+  box-shadow: 0 0 0 3px rgba(211, 197, 182, 0.25);
 }
 
 .form-input::placeholder {
@@ -235,11 +235,11 @@ body {
 
   0%,
   100% {
-    box-shadow: 0 0 10px rgba(201, 164, 76, 0.25);
+    box-shadow: 0 0 10px rgba(211, 197, 182, 0.25);
   }
 
   50% {
-    box-shadow: 0 0 25px rgba(201, 164, 76, 0.45);
+    box-shadow: 0 0 25px rgba(211, 197, 182, 0.45);
   }
 }
 
@@ -258,9 +258,9 @@ body {
 }
 
 .badge-primary {
-  background: rgba(201, 164, 76, 0.15);
+  background: rgba(211, 197, 182, 0.15);
   color: var(--color-primary);
-  border: 1px solid rgba(201, 164, 76, 0.35);
+  border: 1px solid rgba(211, 197, 182, 0.35);
 }
 
 .badge-success {

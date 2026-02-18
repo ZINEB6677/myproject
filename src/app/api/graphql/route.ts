@@ -18,7 +18,7 @@ const server = new ApolloServer<GraphQLContext>({
 });
 
 // Create the Next.js handler with context
-const handler = startServerAndCreateNextHandler<NextRequest, GraphQLContext>(
+const apiHandler = startServerAndCreateNextHandler<NextRequest, GraphQLContext>(
     server,
     {
         context: async (req) => {
@@ -40,4 +40,10 @@ const handler = startServerAndCreateNextHandler<NextRequest, GraphQLContext>(
     }
 );
 
-export { handler as GET, handler as POST };
+export async function GET(request: NextRequest) {
+    return apiHandler(request);
+}
+
+export async function POST(request: NextRequest) {
+    return apiHandler(request);
+}

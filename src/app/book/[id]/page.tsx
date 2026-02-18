@@ -15,6 +15,7 @@ import StarRating from '@/components/StarRating';
 import BookCard from '@/components/BookCard';
 import { BookDetailSkeleton, BookCardSkeleton } from '@/components/Skeletons';
 import { useState } from 'react';
+import { Book } from '@/types';
 
 export default function BookDetailPage() {
     const { id } = useParams<{ id: string }>();
@@ -34,7 +35,7 @@ export default function BookDetailPage() {
     });
 
     const book = data?.getBookById;
-    const relatedBooks = relatedData?.getRelatedBooks ?? [];
+    const relatedBooks = (relatedData?.getRelatedBooks as Book[]) ?? [];
 
     const handleAddToCart = () => {
         if (!book) return;
@@ -207,7 +208,7 @@ export default function BookDetailPage() {
                 <section>
                     <div className="flex items-center gap-3 mb-6">
                         <div className="w-1 h-6 bg-indigo-500 rounded-full" />
-                        <h2 className="text-2xl font-bold text-gray-100">AI Recommended</h2>
+                        <h2 className="text-2xl font-bold text-gray-100">Recommended</h2>
                         <span className="badge badge-primary text-xs">Based on this book</span>
                     </div>
 
