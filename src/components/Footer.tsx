@@ -17,7 +17,7 @@ export default function Footer() {
                             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
                                 B
                             </div>
-                            <span className="font-bold text-xl gradient-text">BookVerse</span>
+                            <span className="font-bold text-xl gradient-text "> Kunooz</span>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                             Your AI-powered gateway to the world of books. Discover, explore, and find your next favorite read with personalized recommendations.
@@ -85,11 +85,11 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-gray-500 text-sm">
-                        © {currentYear} BookVerse. All rights reserved.
+                        © {currentYear} Kunooz. All rights reserved.
                     </p>
                     <div className="flex items-center gap-2">
                         <span className="text-gray-500 text-sm">Powered by</span>
-                        <span className="badge badge-primary text-xs">AI Recommendations</span>
+                        <span className="badge badge-primary text-xs"> AI Recommendations</span>
                     </div>
                 </div>
             </div>

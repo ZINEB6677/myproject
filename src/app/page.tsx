@@ -4,7 +4,7 @@
 // Home Page — Book Listing with Search & Filter
 // ============================================================
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useQuery } from '@apollo/client';
 import { useSearchParams } from 'next/navigation';
 import { GET_BOOKS, SEARCH_BOOKS } from '@/graphql/queries';
@@ -28,7 +28,7 @@ const CATEGORIES = [
   'Business',
 ];
 
-export default function HomePage() {
+function HomeContent() {
   const searchParams = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const categoryParam = searchParams.get('category') || '';
@@ -191,5 +191,13 @@ export default function HomePage() {
         )}
       </section>
     </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center pt-16"><div className="animate-spin h-8 w-8 border-4 border-indigo-500 rounded-full border-t-transparent"></div></div>}>
+      <HomeContent />
+    </Suspense>
   );
 }

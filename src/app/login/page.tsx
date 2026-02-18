@@ -4,14 +4,14 @@
 // Login Page
 // ============================================================
 
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '@/graphql/queries';
 import { useAuth } from '@/context/AuthContext';
 
-export default function LoginPage() {
+function LoginContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const redirect = searchParams.get('redirect') || '/';
@@ -56,7 +56,7 @@ export default function LoginPage() {
                         B
                     </div>
                     <h1 className="text-2xl font-bold text-gray-100">Welcome back</h1>
-                    <p className="text-gray-400 mt-1">Sign in to your BookVerse account</p>
+                    <p className="text-gray-400 mt-1">Sign in to your Kunooz account</p>
                 </div>
 
                 <div className="glass-card p-8">
@@ -133,5 +133,13 @@ export default function LoginPage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+export default function LoginPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center pt-16"><div className="animate-spin h-8 w-8 border-4 border-indigo-500 rounded-full border-t-transparent"></div></div>}>
+            <LoginContent />
+        </Suspense>
     );
 }
