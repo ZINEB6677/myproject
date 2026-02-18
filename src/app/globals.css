@@ -1,0 +1,282 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Global CSS — Kunooz Design System — Dark Library Theme
+   ============================================================ */
+
+:root {
+  /* ===== Primary — Antique Gold ===== */
+  --color-primary: #C9A44C;
+  --color-primary-dark: #A8842F;
+  --color-primary-light: #E6CC7A;
+
+  /* ===== Accent — Muted Teal ===== */
+  --color-accent: #6FA3A0;
+  --color-accent-dark: #4E7F7C;
+
+  --color-success: #7FB8A8;
+  --color-error: #C97A7A;
+  --color-warning: #E0B56A;
+
+  /* ===== Background — Dark Library ===== */
+  --bg-primary: #0F172A;
+  /* Main background */
+  --bg-secondary: #111827;
+  /* Sections */
+  --bg-card: #1E293B;
+  /* Cards */
+  --bg-card-hover: #24324A;
+
+  /* ===== Text — Light Ink ===== */
+  --text-primary: #E5E7EB;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+
+  /* ===== Border ===== */
+  --border-color: #334155;
+  --border-color-light: #475569;
+}
+
+/* ---- Base Styles ---- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ---- Custom Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+/* ---- Gradient Text ---- */
+.gradient-text {
+  background: linear-gradient(135deg,
+      #E6CC7A,
+      #C9A44C,
+      #6FA3A0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Glass Card ---- */
+.glass-card {
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+
+/* ---- Glow Effect ---- */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(201, 164, 76, 0.25);
+}
+
+/* ---- Animated Gradient Background ---- */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse at 20% 50%,
+      rgba(201, 164, 76, 0.08) 0%,
+      transparent 50%),
+    radial-gradient(ellipse at 80% 20%,
+      rgba(111, 163, 160, 0.06) 0%,
+      transparent 50%);
+}
+
+/* ---- Book Card ---- */
+.book-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ---- Button Styles ---- */
+.btn-primary {
+  background: linear-gradient(135deg, #E6CC7A, #C9A44C);
+  color: #0F172A;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #C9A44C, #A8842F);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(201, 164, 76, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background: rgba(201, 164, 76, 0.1);
+  transform: translateY(-1px);
+}
+
+/* ---- Form Styles ---- */
+.form-input {
+  width: 100%;
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 0.875rem 1rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(201, 164, 76, 0.25);
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ---- Star Rating ---- */
+.star-filled {
+  color: var(--color-primary);
+}
+
+.star-empty {
+  color: #475569;
+}
+
+/* ---- Loading Skeleton ---- */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg,
+      #1E293B 25%,
+      #24324A 50%,
+      #1E293B 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 8px;
+}
+
+/* ---- Fade In Animation ---- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ---- Pulse Animation ---- */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(201, 164, 76, 0.25);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(201, 164, 76, 0.45);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ---- Badge ---- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-primary {
+  background: rgba(201, 164, 76, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(201, 164, 76, 0.35);
+}
+
+.badge-success {
+  background: rgba(127, 184, 168, 0.15);
+  color: #9AD5C2;
+  border: 1px solid rgba(127, 184, 168, 0.35);
+}
+
+.badge-warning {
+  background: rgba(224, 181, 106, 0.15);
+  color: #E0B56A;
+  border: 1px solid rgba(224, 181, 106, 0.35);
+}
+
+.badge-error {
+  background: rgba(201, 122, 122, 0.15);
+  color: #E19A9A;
+  border: 1px solid rgba(201, 122, 122, 0.35);
+}
