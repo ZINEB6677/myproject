@@ -15,14 +15,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'BookVerse — AI-Powered Online Bookstore',
-    template: '%s | BookVerse',
+    default: 'Kunooz',
+    template: '%s | Kunooz',
   },
   description:
     'Discover your next favorite book with AI-powered recommendations. Shop thousands of titles across all genres with fast delivery.',
   keywords: ['bookstore', 'books', 'AI recommendations', 'online shopping', 'ebooks'],
   openGraph: {
-    title: 'BookVerse — AI-Powered Online Bookstore',
+    title: 'kunooz',
     description: 'Discover your next favorite book with AI-powered recommendations.',
     type: 'website',
   },

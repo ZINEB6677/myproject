@@ -71,7 +71,7 @@ export default function RegisterPage() {
                         B
                     </div>
                     <h1 className="text-2xl font-bold text-gray-100">Create your account</h1>
-                    <p className="text-gray-400 mt-1">Join BookVerse and start reading</p>
+                    <p className="text-gray-400 mt-1">Join Kunooz and start reading</p>
                 </div>
 
                 <div className="glass-card p-8">

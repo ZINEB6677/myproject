@@ -1,8 +1,4 @@
-// ============================================================
-// Database Seed Script
-// Run: npx ts-node --project tsconfig.json src/lib/seed.ts
-// Or add to package.json: "seed": "npx tsx src/lib/seed.ts"
-// ============================================================
+
 
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
